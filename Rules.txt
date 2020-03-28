@@ -1,0 +1,4 @@
+Interface1 67.221.213.133 75.10.7.90 Interface1 UDP allow
+Interface2 27.38.207.203 250.228.176.136 Interface1 TCP allow
+Interface2 133.8.147.85 0 Interface1 * allow
+Interface1 67.212.152.9 16.73.246.93 Interface3 TCP allow
