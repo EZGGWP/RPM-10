@@ -1,0 +1,59 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Laba 10 na CMAKE",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "CMakeTarget::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CMakeTarget-Debug-c05094de5ca8577f7fb4.json",
+					"name" : "CMakeTarget",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Nikita/Documents/Разработка программных модулей/Laba10CMake/Laba 10 na CMAKE/out/build/x64-Debug",
+		"source" : "C:/Users/Nikita/Documents/Разработка программных модулей/Laba10CMake/Laba 10 na CMAKE"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

@@ -1,0 +1,7 @@
+Interface2 109.204.38.71 128.127.126.13 Interface1 UDP
+Interface2 3.116.80.61 89.101.59.63 Interface2 UDP
+Interface1 127.240.155.247 12.46.23.56 Interface2 UDP
+Interface1 250.192.166.155 66.182.200.38 Interface1 TCP
+Interface1 67.221.213.133 75.10.7.90 Interface1 UDP
+Interface1 111.96.39.68 223.155.69.42 Interface2 TCP
+Interface1 69.104.243.99 188.33.124.78 Interface1 TCP

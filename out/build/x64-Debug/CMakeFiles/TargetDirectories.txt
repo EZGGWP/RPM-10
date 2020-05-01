@@ -1,0 +1,3 @@
+C:/Users/Nikita/Documents/Разработка программных модулей/Laba10CMake/Laba 10 na CMAKE/out/build/x64-Debug/CMakeFiles/CMakeTarget.dir
+C:/Users/Nikita/Documents/Разработка программных модулей/Laba10CMake/Laba 10 na CMAKE/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/Nikita/Documents/Разработка программных модулей/Laba10CMake/Laba 10 na CMAKE/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

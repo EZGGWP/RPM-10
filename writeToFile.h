@@ -1,19 +1,12 @@
-#pragma once
 #ifndef WriteToFile
 #define WriteToFile
 
+#include <iostream>
 ///
-/// @summary Эта функция записывает строку в файл
-/// @param data Это строка, котрую нужно записать в файл
-/// @param fileName Это имя файла, в который будет осуществляться запись данных
+/// @summary пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ
+/// @param data пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ
+/// @param fileName пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 /// 
-void writeStringToFile2(std::string data, std::string fileName) {
-	std::ofstream file;
-	std::string path = "C:\\Users\\Nikita\\Documents\\Разработка программных модулей\\Лаба10\\";
-	path = path + fileName + ".txt";
-	file.open(path.data(), std::ios::app);
-	file << data << std::endl;
-	file.close();
-};
+void writeStringToFile2(std::string data, std::string fileName);
 
 #endif

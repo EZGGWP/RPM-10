@@ -1,0 +1,18 @@
+# ninja log v5
+18	667	610036037	CMakeFiles/CMakeTarget.dir/packetFactory.cpp.obj	d238372ad62ba390
+12	1093	610036037	CMakeFiles/CMakeTarget.dir/packet.cpp.obj	3e76c468f555d6cf
+35	731	610036037	CMakeFiles/CMakeTarget.dir/ruleClass.cpp.obj	e6892af37cd8f2cd
+0	599	610046767	CMakeFiles/CMakeTarget.dir/writeToFile.cpp.obj	c2b617d6490a257e
+4	699	610046556	CMakeFiles/CMakeTarget.dir/trafficPacketHandler.cpp.obj	1dbb8860bc0b1080
+600	830	610046767	CMakeTarget.exe	315790153194dd68
+0	745	610046556	CMakeFiles/CMakeTarget.dir/Laba_10_na_CMAKE.cpp.obj	66e13cec9261fe97
+3	613	610046847	CMakeFiles/CMakeTarget.dir/writeToFile.cpp.obj	c2b617d6490a257e
+0	650	610046847	CMakeFiles/CMakeTarget.dir/Laba_10_na_CMAKE.cpp.obj	66e13cec9261fe97
+651	837	610046847	CMakeTarget.exe	315790153194dd68
+3	613	610046909	CMakeFiles/CMakeTarget.dir/writeToFile.cpp.obj	c2b617d6490a257e
+0	658	610046910	CMakeFiles/CMakeTarget.dir/Laba_10_na_CMAKE.cpp.obj	66e13cec9261fe97
+659	835	610046910	CMakeTarget.exe	315790153194dd68
+8	632	610046960	CMakeFiles/CMakeTarget.dir/trafficPacketHandler.cpp.obj	1dbb8860bc0b1080
+6	637	610046960	CMakeFiles/CMakeTarget.dir/writeToFile.cpp.obj	c2b617d6490a257e
+0	680	610046989	CMakeFiles/CMakeTarget.dir/Laba_10_na_CMAKE.cpp.obj	66e13cec9261fe97
+681	863	610046990	CMakeTarget.exe	315790153194dd68

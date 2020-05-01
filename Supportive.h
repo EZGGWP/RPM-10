@@ -1,61 +1,54 @@
 #ifndef Supportive
 #define Supportive
 
-#include "packetFactory.h"
-#include <map>
+//#include "packetFactory.h"
+//#include <map>
 #include "writeToFile.h"
 
 ///
-/// @summary Это функция, которая очищает файлы
+/// @summary пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 ///
+
 void clearFiles() {
 	std::ofstream file;
-	file.open("C:\\Users\\Nikita\\Documents\\Разработка программных модулей\\Patterns\\Rejected.txt");
+	//std::string path = DIR, path2 = DIR, path3 = DIR;
+	std::string path, path2, path3;
+	file.open("./Rejected.txt", std::ios::out);
 	file.close();
-	file.open("C:\\Users\\Nikita\\Documents\\Разработка программных модулей\\Patterns\\Interface1.txt");
+	file.open("./Interface1.txt", std::ios::out);
 	file.close();
-	file.open("C:\\Users\\Nikita\\Documents\\Разработка программных модулей\\Patterns\\Interface2.txt");
+	file.open("./Interface2.txt", std::ios::out);			// Р‘С‹Р» path += 
 	file.close();
 };
+
 ///
 /// @summary Fills the packets.
-/// @param intr Это название интерфейса, пакеты с которого нужно принять
-/// @param factoryList Это список, который хранит в себе пакеты, подлежащие обработке
-/// @param newFactory Это фабрика, выпускающая пакеты
-/// @return возвращает указатель на список, содержащий пакеты, подлежащие обработке
+/// @param intr пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+/// @param factoryList пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+/// @param newFactory пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+/// @return пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 /// 
 std::list<Packet*> fillPackets(std::string intr, std::list<Packet*>* factoryList, PacketFactory* newFactory) {
 	std::ifstream file;
-	std::string path = "C:\\Users\\Nikita\\Documents\\Разработка программных модулей\\Лаба10\\In";
+	std::string path;
+	path.append("./In");
+	//std::string path = "\\In";
+
 	path = path + intr + ".txt";
 	file.open(path.data());
 	if (!file.is_open()) {
 		std::cout << "File not open" << std::endl;
 	};
 	while (!file.eof()) {
-		factoryList->push_back(newFactory->work());
-		factoryList->back()->setValues(&file);
-		factoryList->back()->inInt = intr;
+	    Packet* packet = newFactory->work();
+	    packet->setValues(&file);
+	    packet->inInt = intr;
+
+	    factoryList->push_back(packet);
 	};
 	file.close();
 	return *factoryList;
 };
-
-///
-/// @summary Эта функция записывает строку в файл
-/// @param data Это строка, котрую нужно записать в файл
-/// @param fileName Это имя файла, в который будет осуществляться запись данных
-/// 
-/*
-void writeStringToFile(std::string data, std::string fileName) {
-	std::ofstream file;
-	std::string path = "C:\\Users\\Nikita\\Documents\\Разработка программных модулей\\Лаба10\\";
-	path = path + fileName + ".txt";
-	file.open(path.data(), std::ios::app);
-	file << data << std::endl;
-	file.close();
-};
-*/
 
 void convey(std::list<Packet*> factoryList, std::map<std::string, TrafficPacketHandler*>* interfaces) {
 	int cnt = 0;
@@ -73,4 +66,28 @@ void convey(std::list<Packet*> factoryList, std::map<std::string, TrafficPacketH
 		}
 	};
 };
+
+std::list<RuleClass*> readRules(std::list<RuleClass*> *ruleList) {
+	std::ifstream file;
+	std::string path;
+	path.append("./Rules.txt");
+	file.open(path);
+	if (!file.is_open()) {
+		std::cout << "File not open" << std::endl;
+	}
+	else {
+		while (!file.eof()) {
+			ruleList->push_back(new RuleClass);
+			getline(file, ruleList->back()->inInt, ' ');
+			getline(file, ruleList->back()->source, ' ');
+			getline(file, ruleList->back()->dest, ' ');
+			getline(file, ruleList->back()->outInt, ' ');
+			getline(file, ruleList->back()->prot, ' ');
+			getline(file, ruleList->back()->act, '\n');
+		};
+	};
+	file.close();
+	return *ruleList;
+}
+
 #endif
